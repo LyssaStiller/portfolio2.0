@@ -1,0 +1,139 @@
+
+body {
+  position: relative;
+  background: #191970;
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+}
+
+#particles-js {
+  background: #191970;
+  min-height: 100%;
+  width: 100vw;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+}
+
+.container {
+  min-height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.header {
+  flex-direction: row;
+  margin: auto;
+  background: #0000A3;
+  width: 70vw;
+  height: 20vh;
+  align-self: start;
+  margin-bottom: 10px;
+
+  position: center;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  height: 65vh;
+  width: 70vw;
+  margin: auto;
+}
+
+.content {
+  background-color: red;
+  flex-grow: 3;
+  height: 100%;
+}
+
+.seeMe {
+  background-color: #191970;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  max-width: 25%;
+  padding-right: 10px;
+}
+
+ul, li {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+.aboutme-content {
+  display: none;
+}
+
+.projects-content {
+  display: none;
+}
+.cv-content {
+  display: none;
+}
+.contact-content {
+  display: none;
+}
+
+.show {
+  display: inline;
+}
+
+/* .tabs{
+  background-color: green;
+  flex-grow: 1;
+  height: 80%;
+  width: 25px;
+} */
+
+
+img {
+  max-width: 100%;
+}
+
+.menu {
+  text-align: center;
+  background: #0000A3;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+
+
+}
+
+.footer {
+  background: black;
+  display: flex;
+  flex-direction: row;
+  width: 70vw;
+  margin-top: 10px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 5px;
+}
+
+.icons img {
+  height: 50px;
+  width: 50px;
+  padding: 5px;
+}
+

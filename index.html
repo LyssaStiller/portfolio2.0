@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="author" content="stillerCodes">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>sexy particles</title>
+      <link href="style.css" type="text/css" rel="stylesheet">
+    </head>
+
+    <body>
+      <div id="particles-js">
+          <div class="container">
+
+            <div class="header">
+              <h1>Lyssa Stiller</h1>
+              <h2>Fullstack Web Developer</h2>
+            </div>
+
+            <div class="main">
+              <div class="seeMe">
+                <img src="Portrait.png" alt="Picture of Fullstack Developer Lyssa Stiller">
+
+                <div class="menu">
+                  <ul>
+                    <li class="option"><h3>About Me</h3></li>
+                    <li class="option"><h3>Projects</h3></li>
+                    <li class="option"><h3>CV</h3></li>
+                    <li class="option"><h3>Contact</h3></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="content">
+                <div class="aboutme-content show">
+                  <p>I'm a Native New Yorker, from the Bronx. </p>
+                </div>
+                <div class="projects-content">
+                  <p>I am a grid of projects</p>
+                </div>
+                <div class="cv-content">
+                  <p>I am a downloadable PDF or interactive map of my life somehow</p>
+                </div>
+                <div class="contact-content">
+                  <p>I am a form</p>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="footer">
+              <div class="icons">
+                <a href="https://www.linkedin.com/in/alyssa-stiller/" target="_blank"><img src="icons8-linkedin.svg"></a>
+                <a href="https://github.com/LyssaStiller" target="_blank"><img src="icons8-github-filled.svg"></a>
+              </div>
+            </div>
+
+          </div>
+
+      </div>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+      <script>
+        var partJson = {
+        "particles": {
+          "number": {
+            "value": 100,
+            "density": {
+              "enable": false,
+              "value_area": 800
+            }
+          },
+          "color": {
+            "value": "#fff"
+          },
+          "shape": {
+            "type": "circle",
+            "stroke": {
+              "width": 0,
+              "color": "#000000"
+            },
+            "polygon": {
+              "nb_sides": 5
+            },
+            "image": {
+              "src": "img/github.svg",
+              "width": 100,
+              "height": 100
+            }
+          },
+          "opacity": {
+            "value": 0.8,
+            "random": false,
+            "anim": {
+              "enable": false,
+              "speed": 0.1,
+              "opacity_min": 0.1,
+              "sync": false
+            }
+          },
+          "size": {
+            "value": 10,
+            "random": true,
+            "anim": {
+              "enable": false,
+              "speed": 10,
+              "size_min": 0.1,
+              "sync": false
+            }
+          }
+        }
+      };
+
+var jsonUri = "data:text/plain;base64,"+window.btoa(JSON.stringify(partJson));
+
+particlesJS.load('particles-js', jsonUri,  function(){
+          console.log('particles.json loaded . . . ')
+         });
+
+        // particlesJS.load('particles-js', 'particles.json', function(){
+        //   console.log('particles.json loaded . . . ')
+        // })
+      </script>
+
+      <script src="script.js"></script>
+    </body>
+
+</html>
+
+
+
+
