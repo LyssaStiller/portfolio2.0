@@ -6,6 +6,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>sexy particles</title>
       <link href="style.css" type="text/css" rel="stylesheet">
+
+      <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     </head>
 
     <body>
@@ -13,15 +15,15 @@
           <div class="container">
 
             <div class="header">
-              <h1>Lyssa Stiller</h1>
+              <h1>Lyssa Stiller</h1><br>
               <h2>Fullstack Web Developer</h2>
             </div>
 
             <div class="main">
               <div class="seeMe">
-                <img src="Portrait.png" alt="Picture of Fullstack Developer Lyssa Stiller">
+                <img src="portrait.png" alt="Picture of Fullstack Developer Lyssa Stiller">
 
-                <div class="menu">
+              <div class="menu">
                   <ul>
                     <li class="option"><h3>About Me</h3></li>
                     <li class="option"><h3>Projects</h3></li>
@@ -33,21 +35,65 @@
 
               <div class="content">
                 <div class="aboutme-content show">
-                  <p>I'm a Native New Yorker, from the Bronx. </p>
+                  <p>My name is Lyssa and I am a native New Yorker.</p>
+
+                  <p>I was educated in Behavioral Psychology at Barnard College but my primary education was the city itself.</p>
+
+                  <p>Born and raised in the Bronx and then attending school <br>in Manhattan was my first exposure to how humans segment themselves. I became fascinated with the wide range of lifestyles and access to resources you see in<br> urban environments.</p>
+
+                  <p>I'm interested in using technology to give users a greater quality of life whether it be a deeper sense of agency in pursuing their personal goals, more effective tools for learning/information retention or better access to things that can improve mental health.</p>
+
+                  <p>If you recognize your own passions in the statements above, reach out.</p>
+
+                  <p>Let's talk and possibly collaborate.</p>
+
                 </div>
                 <div class="projects-content">
                   <p>I am a grid of projects</p>
+                  <div class="projects">
+                    <h3>Name</h3>
+                    <img class="thumbnail" src="portfolioIcon.svg">
+                    <div class="description">
+                      <p></p>
+                      <p><a href="#">Code</a></p>
+                    </div>
+                  </div>
+                  <div class="projects">project 2
+                      <h3>Name</h3>
+                      <img class="thumbnail" src="portfolioIcon.svg">
+                      <div class="description">
+                        <p></p>
+                        <p><a href="#">Code</a></p>
+                      </div>
+                  </div>
+                  <div class="projects">project 3
+                      <h3>Name</h3>
+                      <img class="thumbnail" src="portfolioIcon.svg">
+                      <div class="description">
+                        <p></p>
+                        <p><a href="#">Code</a></p>
+                      </div>
+                  </div>
                 </div>
                 <div class="cv-content">
+                  <a href="https://github.com/LyssaStiller/resume/raw/master/Stiller%20Resume.pdf">View my Resume here</a>
+                  <h3>OR</h3>
                   <p>I am a downloadable PDF or interactive map of my life somehow</p>
                 </div>
                 <div class="contact-content">
-                  <p>I am a form</p>
+                    <form action="" method="get" class="contact-form" action="sendForm.php">
+                        <div class="contact-form-child">
+                          <input type="text" name="name" id="name" required placeholder="Name">
+                          <input type="email" name="email" id="email" required placeholder="Email">
+                          <textarea placeholder="Tell me about it your project" name="message" maxlength="500"></textarea>
+                          <p><button type="submit">Let's Talk</button></p>
+
+                        </div>
+                    </form>
                 </div>
               </div>
 
             </div>
-
             <div class="footer">
               <div class="icons">
                 <a href="https://www.linkedin.com/in/alyssa-stiller/" target="_blank"><img src="icons8-linkedin.svg"></a>
@@ -73,7 +119,7 @@
             }
           },
           "color": {
-            "value": "#fff"
+            "value": "#F5F5F5"
           },
           "shape": {
             "type": "circle",

@@ -1,107 +1,147 @@
 
 body {
   position: relative;
-  background: #191970;
-  font-family: 'Roboto Mono', monospace;
+  background: #D7D7D7;
+  font-family: 'Roboto', sans-serif;
   color: white;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  letter-spacing: 0.1em;
 }
 
 #particles-js {
-  background: #191970;
-  min-height: 100%;
-  width: 100vw;
+  background: #D7D7D7;
   display: flex;
   position: absolute;
+  min-height: 100%;
+  width: 100vw;
   flex-direction: column;
+
 }
 
 .container {
-  min-height: 100%;
+  /* min-height: 100%; */
   width: 100%;
   position: absolute;
+  margin: auto;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 100px; /*height of the footer*/
 
 }
 
 .header {
-  flex-direction: row;
+
+  flex-direction: column;
+  display: inline-flex;
   margin: auto;
   background: #0000A3;
-  width: 70vw;
-  height: 20vh;
-  align-self: start;
-  margin-bottom: 10px;
-
-  position: center;
+  width: 90vw;
+  height: 30vh;
+  margin-bottom: 2.5%;
+  background-image: url('skyline.jpg');
+  background-size: cover;
+  background-position: 100% 10%;
+  overflow: hidden;
   text-align: center;
+
+}
+
+h1,
+h2 {
+ color: black;
+ background-color: #edf2f3;
+ display: inline;
 }
 
 .main {
   display: flex;
-  flex-direction: row;
-  height: 65vh;
-  width: 70vw;
+  flex-direction: row-reverse;
+  height: 70vh;
+  width: 80vw;
   margin: auto;
+  justify-content: space-evenly;
+  position: relative;
 }
 
 .content {
-  background-color: red;
+  background-color: #edf2f3;
+  color: black;
   flex-grow: 3;
-  height: 100%;
+  overflow-x: hidden;
+  overflow-y:auto;
 }
 
 .seeMe {
-  background-color: #191970;
   flex-grow: 1;
   flex-direction: column;
   justify-content: space-evenly;
   height: 100%;
+  min-width: 25%;
   max-width: 25%;
-  padding-right: 10px;
+  padding-left: 10px;
+
 }
 
 ul, li {
   list-style: none;
   text-align: center;
-  padding: 0;
-  margin: 0;
+  color:#EABC07;
+  background: #000;
+  padding: 1px
 }
 
 li:hover {
   cursor: pointer;
+  color: #000;
+  background: #EABC07;
 }
 
 .aboutme-content {
   display: none;
+  padding-left: 10%;
+  padding-top: 5%;
+  line-height: 1.5em;
+  /* overflow-x: hidden;
+  box-sizing: border-box; */
 }
 
 .projects-content {
   display: none;
+  overflow-y: auto;
+  padding-left: 5%;
 }
+
 .cv-content {
   display: none;
+  padding: 5%;
 }
 .contact-content {
   display: none;
+  height: 100%;
 }
 
 .show {
-  display: inline;
+  display: block;
+  overflow: hidden;
 }
 
-/* .tabs{
-  background-color: green;
-  flex-grow: 1;
-  height: 80%;
-  width: 25px;
-} */
+.aboutme-content p {
 
+  font-size: 14pt;
+  max-width: 80%;
+  text-align: center;
+
+
+}
 
 img {
   max-width: 100%;
@@ -109,19 +149,36 @@ img {
 
 .menu {
   text-align: center;
-  background: #0000A3;
-  padding-top: 2.5%;
-  padding-bottom: 2.5%;
+  opacity: 0.9;
+
 
 
 }
 
-.footer {
-  background: black;
+.projects {
+  width: 80%;
+  height: 100px;
+  background: blue;
+  margin: 30px;
   display: flex;
   flex-direction: row;
-  width: 70vw;
+}
+
+.footer {
+  background: red;
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  height: 60px;
   margin-top: 10px;
+  position: absolute;
+  bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
 }
 
 .icons {
@@ -137,3 +194,79 @@ img {
   padding: 5px;
 }
 
+.contact-form {
+ display: flex;
+ justify-content: flex-end;
+ align-items: center;
+ flex-direction: column;
+}
+
+form {
+  background: #40b0df;
+  height: 100%;
+
+
+}
+
+input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: black;
+  width: 350px;
+  padding: 10px;
+  margin: 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  background: transparent;
+}
+
+input:focus {
+  border-color: blue;
+}
+
+/* input[type="text"]
+{
+    background: transparent;
+    border: none;
+} */
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: blue;
+  opacity: 0.8; /* Firefox */
+}
+
+textarea {
+  width: 350px;
+  padding: 10px;
+  margin: 20px;
+  height: 150px;
+  font-size: 14px;
+  border-color: black;
+  border-width: 0 0 2px;
+  background: transparent;
+}
+
+button {
+  font-size: 14px;
+}
+
+
+/*
+ORIGINAL COLOR SCHEME
+placeholder   color: blue;
+background-color: #191970;
+background-color: #edf2f3;
+background: #0000A3;
+OG font:  'Roboto', sans-serif
+*/
+
+/*
+NEW COLOR SCHEME
+background-color: #edf2f3;
+particles: #F5F5F5
+black : #080600
+gold : #EABC07
+grey:
+bg white: #F5F5F5
+
+*/
