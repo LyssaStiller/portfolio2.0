@@ -8,22 +8,24 @@
       <link href="style.css" type="text/css" rel="stylesheet">
 
       <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Comfortaa|Poppins&display=swap" rel="stylesheet">
     </head>
 
     <body>
       <div id="particles-js">
           <div class="container">
 
-            <div class="header">
+            <div class="header shadow">
               <h1>Lyssa Stiller</h1><br>
               <h2>Fullstack Web Developer</h2>
             </div>
 
             <div class="main">
               <div class="seeMe">
-                <img src="portrait.png" alt="Picture of Fullstack Developer Lyssa Stiller">
-
-              <div class="menu">
+                <div class="self-portrait shadow">
+                    <img src="portrait.png" alt="Picture of Fullstack Developer Lyssa Stiller">
+                </div>
+                <div class="menu shadow">
                   <ul>
                     <li class="option"><h3>About Me</h3></li>
                     <li class="option"><h3>Projects</h3></li>
@@ -33,7 +35,7 @@
                 </div>
               </div>
 
-              <div class="content">
+              <div class="content shadow">
                 <div class="aboutme-content show">
                   <p>My name is Lyssa and I am a native New Yorker.</p>
 
@@ -49,29 +51,49 @@
 
                 </div>
                 <div class="projects-content">
-                  <p>I am a grid of projects</p>
                   <div class="projects">
-                    <h3>Name</h3>
-                    <img class="thumbnail" src="portfolioIcon.svg">
+                    <div class="thumbnail">
+                      <img src="powerprose.jpg">
+                      <h3 class="title">Power Prose</h3>
+                    </div>
                     <div class="description">
-                      <p></p>
-                      <p><a href="#">Code</a></p>
+                      <p>A web application that uses speech-to-text and tone analysis technology to help women decrease their use of qualifying words and phrases, which can demean their authority and diminish their contributions.</p>
+                      <div class="leaveSite">
+                          <!-- <img class="live" src="visit.png">
+                          <img class="git" src="code.svg"> -->
+                          <p><a href="#">GitHub</a></p>
+                          <p><a href="#">Visit</a></p>
+                      </div>
                     </div>
                   </div>
-                  <div class="projects">project 2
-                      <h3>Name</h3>
-                      <img class="thumbnail" src="portfolioIcon.svg">
+                  <div class="projects">
+                      <div class="thumbnail">
+                        <img src="memoryGame.png">
+                        <h3 class="title">Memory Game</h3>
+                      </div>
                       <div class="description">
-                        <p></p>
-                        <p><a href="#">Code</a></p>
+                        <p>In this project, match the 16 pairs. Timer starts with the first click and your score is determined by how many stars are left.</p>
+                        <div class="leaveSite">
+                            <!-- <img class="live" src="visit.png">
+                            <img class="git" src="code.svg"> -->
+                            <p><a href="#">GitHub</a></p>
+                            <p><a href="#">Visit</a></p>
+                        </div>
                       </div>
                   </div>
-                  <div class="projects">project 3
-                      <h3>Name</h3>
-                      <img class="thumbnail" src="portfolioIcon.svg">
+                  <div class="projects">
+                      <div class="thumbnail">
+                        <img src="beeers.png">
+                        <h3 class="title">Beers, Beers, Beers </h3>
+                      </div>
                       <div class="description">
-                        <p></p>
-                        <p><a href="#">Code</a></p>
+                        <p>NYC Craft is an e-commerce store that offers a variety of craft beers. From a technical standpoint, it includes a shopping cart, payment processing and account management.</p>
+                        <div class="leaveSite">
+                            <!-- <img class="live" src="visit.png">
+                            <img class="git" src="code.svg"> -->
+                            <p><a href="#">GitHub</a></p>
+                            <p><a href="#">Visit</a></p>
+                        </div>
                       </div>
                   </div>
                 </div>
@@ -82,13 +104,24 @@
                 </div>
                 <div class="contact-content">
                     <form action="" method="get" class="contact-form" action="sendForm.php">
-                        <div class="contact-form-child">
-                          <input type="text" name="name" id="name" required placeholder="Name">
-                          <input type="email" name="email" id="email" required placeholder="Email">
-                          <textarea placeholder="Tell me about it your project" name="message" maxlength="500"></textarea>
-                          <p><button type="submit">Let's Talk</button></p>
-
+                        <div class="form-group">
+                          <input type="text" class="form-input" name="name" id="name" required>
+                          <label class="form-label">
+                              <span class="content-name">Name</span>
+                          </label>
                         </div>
+                        <div class="form-group">
+                          <input type="email"  class="form-input" name="email" id="email" required>
+                          <label class="form-label">
+                              <span class="content-name">Email</span>
+                          </label>
+                        </div>
+                        <div class="form-group">
+                          <textarea name="message" maxlength="500" required></textarea>
+                          <label class="textarea-label">
+                            <span class="content-name">Tell me about your project</span></label>
+                        </div>
+                        <p><button type="submit">Let's Talk</button><p>
                     </form>
                 </div>
               </div>
@@ -96,8 +129,8 @@
             </div>
             <div class="footer">
               <div class="icons">
-                <a href="https://www.linkedin.com/in/alyssa-stiller/" target="_blank"><img src="icons8-linkedin.svg"></a>
-                <a href="https://github.com/LyssaStiller" target="_blank"><img src="icons8-github-filled.svg"></a>
+                <a href="https://www.linkedin.com/in/alyssa-stiller/" target="_blank"><img src="linkedIn_black.png"></a>
+                <a href="https://github.com/LyssaStiller" target="_blank"><img src="github_black.png"></a>
               </div>
             </div>
 

@@ -75,28 +75,30 @@ h2 {
 .content {
   background-color: #edf2f3;
   color: black;
+  height: 100%;
   flex-grow: 3;
   overflow-x: hidden;
   overflow-y:auto;
 }
 
 .seeMe {
+  display: flex;
   flex-grow: 1;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 100%;
+  max-height: 100%;
   min-width: 25%;
   max-width: 25%;
-  padding-left: 10px;
-
+  margin-left: 10px;
 }
+
 
 ul, li {
   list-style: none;
   text-align: center;
   color:#EABC07;
   background: #000;
-  padding: 1px
+
 }
 
 li:hover {
@@ -139,8 +141,6 @@ li:hover {
   font-size: 14pt;
   max-width: 80%;
   text-align: center;
-
-
 }
 
 img {
@@ -150,22 +150,77 @@ img {
 .menu {
   text-align: center;
   opacity: 0.9;
-
-
-
 }
 
 .projects {
-  width: 80%;
-  height: 100px;
-  background: blue;
+  width: 90%;
+  height: 250px;
+  background:  #ffdb15;
   margin: 30px;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  color: black;
+}
+
+
+.thumbnail{
+  /* border: 1px solid blue; */
+  padding: 10px;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  flex: 1;
+  justify-items: center;
+}
+
+.thumbnail img {
+  object-fit: cover;
+  width: 150px;
+  height: 150px;
+}
+
+.title {
+  font-family: 'Comfortaa', cursive;
+}
+
+.description {
+  display: flex;
+  max-height: 100%;
+  flex-direction: column;
+  /* border: 1px solid blue; */
+  margin: 1%;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  flex: 2;
+  line-height: 1.6;
+
+}
+
+.leaveSite {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  justify-items: flex-start;
+}
+
+.leaveSite a {
+  color: blue;
+}
+
+.leaveSite a:hover {
+  color: black;
+  transform: translateY(-20px);
+  transition: all 100ms ease-in;
+}
+
+.leaveSite a:visited {
+  color: #3B3B3B;
 }
 
 .footer {
-  background: red;
+  background: #EABC07;
   display: flex;
   flex-direction: row;
   width: 90vw;
@@ -186,6 +241,12 @@ img {
   justify-content: center;
   width: 100%;
   margin: 5px;
+  padding-bottom: 10px;
+}
+
+.icons img:hover {
+  transform: translateY(-10px);
+  transition: all 100ms ease-in;
 }
 
 .icons img {
@@ -195,59 +256,103 @@ img {
 }
 
 .contact-form {
- display: flex;
- justify-content: flex-end;
- align-items: center;
- flex-direction: column;
+  background: #f3f5f9;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  align-items: center;
+  padding: 5%;
 }
 
-form {
-  background: #40b0df;
+.form-group {
+  width: 80%;
+  padding: 15px;
+  position: relative;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+
+}
+
+.form-label {
+  display: block;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0;
+  width: 350px;
   height: 100%;
-
-
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  z-index: 1;
+  pointer-events: none;
+  border-bottom: 2px solid  #5fa8d3;
 }
 
 input {
-  outline: 0;
-  border-width: 0 0 2px;
-  border-color: black;
+  outline: none;
+  position: relative;
+  border: 0px;
+  top: 0px;
+  left: 0px;
+  height: 100%;
   width: 350px;
-  padding: 10px;
-  margin: 20px;
+  padding-top: 10px;
   font-size: 14px;
-  border-radius: 5px;
   background: transparent;
 }
 
-input:focus {
-  border-color: blue;
+.content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
 }
 
-/* input[type="text"]
-{
-    background: transparent;
-    border: none;
-} */
-
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: blue;
-  opacity: 0.8; /* Firefox */
+input:focus + .form-label .content-name,
+input:valid + .form-label .content-name {
+  transform: translateY(-100%);
+  color: blue
 }
 
 textarea {
+  border: 0;
+  outline: none;
   width: 350px;
-  padding: 10px;
-  margin: 20px;
-  height: 150px;
-  font-size: 14px;
-  border-color: black;
-  border-width: 0 0 2px;
+  left: 0;
+  padding-top: 10px;
+  height: 80px;
+  font-size: 14pt;
   background: transparent;
+}
+
+.textarea-label  {
+  color: black;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  pointer-events: none;
+  text-align: left;
+
+}
+
+textarea:focus + .textarea-label .content-name,
+textarea:valid + .textarea-label .content-name
+{
+  transform: translateY(-350%);
+  color: blue;
+}
+
+.shadow {
+  -moz-box-shadow:    2px 2px 2px 2px #292929;
+  -webkit-box-shadow: 2px 2px 2px 2px #292929;
+  box-shadow:         2px 2px 2px 2px #292929;
 }
 
 button {
   font-size: 14px;
+  padding: 2%;
 }
 
 
@@ -270,3 +375,12 @@ grey:
 bg white: #F5F5F5
 
 */
+
+/*
+body {
+  background: #95a5a6;
+}
+.custom-form {
+
+  font-family: 'Roboto', sans-serif;
+
