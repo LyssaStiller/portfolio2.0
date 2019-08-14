@@ -9,7 +9,7 @@
  body {
   position: relative;
   background: linear-gradient(#29da31,#60d666,#29da31, #0037fc, #0037fc);
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   margin: 0;
   padding: 0;
   min-height: 100%;
@@ -48,16 +48,18 @@
 .header {
 
   flex-direction: column;
-  display: inline-flex;
+  display: flex;
   margin: auto;
   width: 90vw;
-  height: 30vh;
+  height: 20vh;
   margin-bottom: 2.5%;
-  background-image: url('skyline.jpg');
-  background-size: cover;
+  background-image: url('glitched5.png');
+  background-size: contain;
   background-position: 100% 10%;
   overflow: hidden;
   text-align: center;
+  align-items: center;
+  font-family: 'Roboto Mono', monospace;
 
 }
 
@@ -65,72 +67,96 @@ h1,
 h2 {
  color: black;
  background-color: #edf2f3;
- display: block;
+ display: inline;
+ padding: 5px;
 }
 
 .main {
   display: flex;
   flex-direction: row-reverse;
-  height: 70vh;
+  height: 90vh;
   width: 80vw;
   margin: auto;
   justify-content: space-evenly;
   position: relative;
+  border-radius: 2px;
 }
 
 .content {
   /* background-color: #edf2f3; */
   color: black;
   height: 100%;
-  background: #fed536;
+  background: #ffdb15;
   flex-grow: 4;
   overflow-x: hidden;
   overflow-y:auto;
   padding-right: -2%
 }
-
+/*
 .content-bg {
   position: absolute;
   background: #fed536;
   z-index: -1;
   opacity: 0.5;
   min-height: 100%;
-}
+} */
 
 .seeMe {
   display: flex;
   flex-grow: 1;
   flex-direction: column;
-  justify-content: space-evenly;
-  max-height: 100;
-  padding-right: 30px;
+  justify-content: center;
+  /* max-height: 100%; */
+  /* padding-right: 30px; */
   min-width: 25%;
   max-width: 25%;
   margin-left: 30px;
   overflow: hidden;
 }
-/*
-.self-portrait, menu {
-  flex: 1;
-} */
 
-ul {
-  padding: 0;
+.self-portrait {
+  border: 1px solid black;
 }
 
 
+.menu {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  text-align: center;
+  width: 100%;
+  opacity: 0.9;
+  align-items: center;
+  border-radius: 2px;
+
+}
+
+.menu-child1 {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* flex-grow: 4; */
+  margin-right: 2%;
+}
+
+.menu-child2 {
+  display: flex;
+  flex-direction: row;
+}
+
 .option {
   list-style: none;
-
   color:#fb1ba8;
   background: #000;
+  border-radius: 2px;
   padding-top: 1px;
   padding-bottom: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
   text-align: center;
   margin-bottom: -2px;
   margin-top: -2px;
-
-
+  width:100%;
 }
 
 .option:hover {
@@ -179,11 +205,6 @@ ul {
 img {
   max-width: 100%;
   margin-bottom: -2%;
-}
-
-.menu {
-  text-align: center;
-  opacity: 0.9;
 }
 
 .projects {
@@ -441,7 +462,7 @@ img {
   top: 0px;
   bottom: 0px;
   left: 0;
-  width: 350px;
+  width: 80%;
   height: 100%;
   color: black;
   font-family: Arial, Helvetica, sans-serif;
@@ -460,6 +481,7 @@ input {
   height: 100%;
   width: 350px;
   padding-top: 10px;
+  margin-top: 25;
   font-size: 14px;
   background: transparent;
 }
@@ -517,7 +539,7 @@ button {
   background-color: transparent;
   width: 150px;
   border: 2px solid white;
-  margin-top: 50px;
+  margin-top: 150px;
 
 }
 
@@ -558,6 +580,12 @@ body {
 green: #29da31
 blue: #0037fc }
 .custom-form {
+
+  font-family: 'Lexend Deca', sans-serif;
+font-family: 'Inconsolata', monospace;
+font-family: 'Roboto Mono', monospace;
+font-family: 'Ubuntu', sans-serif;
+
 
   font-family: 'Roboto', sans-serif;
 
