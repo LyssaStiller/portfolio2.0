@@ -8,7 +8,7 @@
 
  body {
   position: relative;
-  background: linear-gradient(#29da31,#60d666,#29da31, #0037fc, #0037fc);
+  background: linear-gradient(#808080, #525252, #3B3B3B);
   font-family: 'Ubuntu', sans-serif;
   margin: 0;
   padding: 0;
@@ -21,7 +21,7 @@
 }
 
 #particles-js {
-  background: linear-gradient(#29da31,#29da31,#29da31, #0037fc, #0037fc);
+  /* background: linear-gradient(#808080, #525252, #3B3B3B); */
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -50,16 +50,18 @@
   flex-direction: column;
   display: flex;
   margin: auto;
-  width: 90vw;
+  width: 100vw;
   height: 20vh;
+  margin-top: 2.5%;
   margin-bottom: 2.5%;
-  background-image: url('glitched5.png');
+  background-image: url('PTheaderMOM.png');
   background-size: contain;
   background-position: 100% 10%;
   overflow: hidden;
   text-align: center;
   align-items: center;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.1em;
 
 }
 
@@ -68,7 +70,7 @@ h2 {
  color: black;
  background-color: #edf2f3;
  display: inline;
- padding: 5px;
+ padding: 5px 20px;
 }
 
 .main {
@@ -84,9 +86,9 @@ h2 {
 
 .content {
   /* background-color: #edf2f3; */
-  color: black;
+  color: white;
+  background: #00B200;
   height: 100%;
-  background: #ffdb15;
   flex-grow: 4;
   overflow-x: hidden;
   overflow-y:auto;
@@ -115,7 +117,7 @@ h2 {
 }
 
 .self-portrait {
-  border: 1px solid black;
+  border: 3px solid black;
 }
 
 
@@ -146,7 +148,7 @@ h2 {
 
 .option {
   list-style: none;
-  color:#fb1ba8;
+  color:white;
   background: #000;
   border-radius: 2px;
   padding-top: 1px;
@@ -159,17 +161,23 @@ h2 {
   width:100%;
 }
 
+/*James Passos*/
+
 .option:hover {
   cursor: pointer;
   color: #000;
-  background: #fb1ba8;
+  background: white;
 }
 
 .aboutme-content {
   display: none;
+
   padding-left: 10%;
   padding-top: 5%;
-  line-height: 1.5em;
+  line-height: 1em;
+  font-size: 2em;
+  text-align: left;
+  height: 100%;
   /* overflow-x: hidden;
   box-sizing: border-box; */
 }
@@ -199,7 +207,7 @@ h2 {
 
   font-size: 14pt;
   max-width: 80%;
-  text-align: center;
+  text-align: left;
 }
 
 img {
@@ -210,7 +218,9 @@ img {
 .projects {
   width: 90%;
   height: 250px;
-  background:  #ffdb15;
+  background: #333333;
+  opacity: 1;
+  color: white;
   margin: 30px;
   display: flex;
   flex-direction: row;
@@ -238,12 +248,14 @@ img {
 
 .title {
   font-family: 'Comfortaa', cursive;
+  color: white;
 }
 
 .description {
   display: flex;
   max-height: 100%;
   flex-direction: column;
+  color: white;
   /* border: 1px solid blue; */
   margin: 1%;
   padding-right: 5px;
@@ -261,22 +273,23 @@ img {
 }
 
 .leaveSite a {
-  color: black;
+  color: white;
 }
 
 .leaveSite a:hover {
-  color: #fb1ba8;
+  color: blue;
   transform: translateY(-20px);
   transition: all 100ms ease-in;
 }
 
 .leaveSite a:visited {
-  color: blue;
+  color: black;
 }
 
 .timeline {
   position: relative;
-  margin: 50px auto;
+  margin: auto;
+  padding-top: -40px;
   padding: 40px 0;
   width: 500px;
   box-sizing: border-box;
@@ -319,9 +332,6 @@ img {
   clear: both;
 }
 
-.content {
-  padding-bottom: 20px;
-}
 
 .resume p{
   text-align: center;
@@ -336,9 +346,9 @@ img {
   right: -6px;
   width: 10px;
   height: 10px;
-  background: hotpink;
+  background: #282828;
   border-radius: 50%;
-  box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.2);
+  box-shadow: 0 0 0 3px #282828;
 }
 
 .timeline ul li:nth-child(even):before {
@@ -348,16 +358,16 @@ img {
   left: -4px;
   width: 10px;
   height: 10px;
-  background: hotpink;
+  background: #181818;
   border-radius: 50%;
-  box-shadow: 0 0 0 3px rgba(233, 33, 99, 0.2);
+  box-shadow: 0 0 0 3px #282828;
 }
 
 .timeline ul li h1 {
   margin: 0;
   padding: 0;
   font-weight: 600;
-  color: rgba(233, 33, 99,1);
+  color: #333333;
   background: transparent;
   text-align: center;
 }
@@ -381,7 +391,7 @@ img {
   right: -165px;
   margin: 0;
   padding: 8px 16px;
-  background: rgba(233, 33, 99,1);
+  background: #333333;
   color: #fff;
   border-radius: 18px;
 
@@ -393,7 +403,7 @@ img {
   left: -165px;
   margin: 0;
   padding: 8px 16px;
-  background: rgba(233, 33, 99,1);
+  background: #333333;
   color: #fff;
   border-radius: 18px;
 
@@ -402,7 +412,7 @@ img {
 
 
 .footer {
-  background: #fb1ba8;
+  background: #333333;
   display: flex;
   flex-direction: row;
   width: 90vw;
@@ -469,7 +479,7 @@ img {
   font-size: 1.5em;
   z-index: 1;
   pointer-events: none;
-  border-bottom: 2px solid  #fb1ba8;
+  border-bottom: 2px solid  white;
 }
 
 input {
@@ -496,7 +506,7 @@ input {
 input:focus + .form-label .content-name,
 input:valid + .form-label .content-name {
   transform: translateY(-100%);
-  color:#fb1ba8
+  color:white;
 }
 
 textarea {
@@ -505,9 +515,9 @@ textarea {
   width: 350px;
   left: 0;
   padding-top: 10px;
-  height: 80px;
+  height: 200px;
   font-size: 14pt;
-  background: transparent;
+  /* background: transparent; */
 }
 
 .textarea-label  {
@@ -524,13 +534,24 @@ textarea:focus + .textarea-label .content-name,
 textarea:valid + .textarea-label .content-name
 {
   transform: translateY(-350%);
-  color: #fb1ba8;
+  color: white;
+}
+
+.shadow-name {
+  -moz-box-shadow:    2px 5px 10px 2px #292929;
+  -webkit-box-shadow: 2px 5px 10px 2px #292929;
+  box-shadow:         2px 5px 10px 2px #292929;
+}
+.shadow-upper {
+  -moz-box-shadow:    2px 20px 20px 2px #292929;
+  -webkit-box-shadow: 2px 20px 20px 2px #292929;
+  box-shadow:         2px 20px 20px 2px #292929;
 }
 
 .shadow {
-  -moz-box-shadow:    2px 2px 2px 2px #292929;
-  -webkit-box-shadow: 2px 2px 2px 2px #292929;
-  box-shadow:         2px 2px 2px 2px #292929;
+  -moz-box-shadow:    2px 5px 10px 2px #292929;
+  -webkit-box-shadow: 2px 5px 10px 2px #292929;
+  box-shadow:         2px 5px 10px 2px #292929;
 }
 
 button {
@@ -544,7 +565,7 @@ button {
 }
 
 button:hover {
-  background-color:#fb1ba8;
+  background-color: black;
   color: white;
   font-weight: 1.5em;
 }
@@ -576,6 +597,8 @@ body {
   background: #95a5a6;
 }
 
+(#29da31,#29da31,#29da31, #0037fc, #0037fc)
+
 {possible gradient
 green: #29da31
 blue: #0037fc }
@@ -586,6 +609,7 @@ font-family: 'Inconsolata', monospace;
 font-family: 'Roboto Mono', monospace;
 font-family: 'Ubuntu', sans-serif;
 
+#708090;
 
   font-family: 'Roboto', sans-serif;
 
