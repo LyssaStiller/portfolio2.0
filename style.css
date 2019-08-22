@@ -113,7 +113,7 @@
   height: 100%;
   flex-grow: 4;
   overflow-x: hidden;
-  overflow-y:auto;
+  overflow-y: scroll;
   padding-right: -2%;
   border-radius: 2px;
 }
@@ -200,13 +200,14 @@
   font-size: 2em;
   text-align: left;
   height: 100%;
+  overflow-y: scroll;
   /* overflow-x: hidden;
   box-sizing: border-box; */
 }
 
 .projects-content {
   display: none;
-  overflow-y: auto;
+  overflow-y: scroll;
   padding-left: 5%;
 }
 
@@ -241,7 +242,7 @@ img {
 
 .projects {
   width: 90%;
-  height: 250px;
+  height: 275px;
   background: #333333;
   opacity: 1;
   color: white;
@@ -475,15 +476,21 @@ img {
   padding: 5px;
 }
 
-.contact-form {
-  /* background: #f3f5f9; */
+.form-wrapper {
+  height: 100%;
+  width: 100%;
   display: flex;
-  position: absolute;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-form {
+  display: flex;
+  /* position: absolute; */
   width: 500px;
-  /* background-color: #333333; */
-  margin-top: 40px;
+  /* margin-top: 40px;
   top: 75px;
-  left: 200px;
+  left: 200px; */
   margin: auto;
   max-height: 500px;
   flex-direction: column;
@@ -602,8 +609,8 @@ textarea:valid + .textarea-label .content-name
 button {
   font-size: 1.5em;
   position: absolute;
-  top: 500px;
-  left: 170px;
+  top: 550px;
+  left: 275px;
   padding: 1%;
   background-color: transparent;
   width: 150px;
@@ -620,12 +627,100 @@ button:hover {
 .pageTitle {
   font-family: 'Raleway', sans-serif;
   position: absolute;
+  margin-bottom: 2.5%;
   padding: 5px 20px;
   color: black;
   background-color: #edf2f3;
   top: 25px;
   left: 275px;
   border-radius: 2.5px;
+}
+
+@media(max-width: 1100px) {
+  .pageTitle, button {
+    position: absolute;
+    left: 50px;
+  }
+}
+
+@media(max-width: 650px) {
+  .main {
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+  }
+
+  .aboutme-content {
+    overflow-y: scroll;
+  }
+
+  .seeMe {
+    flex-direction: row-reverse;
+    min-width: 100%;
+    justify-content: left;
+    flex-grow: 1;
+  }
+
+  .content{
+    flex-grow: 1;
+  }
+
+  .menu {
+    flex-direction: column-reverse;
+    margin-right: 80px;
+    margin-top: 50px;
+    justify-content: space-around;
+    }
+
+  .menu-child1 {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .menu-child1 ul {
+    float: left;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  .self-portrait {
+    display: none;
+  }
+
+  .self-portrait img {
+    background-size: contain;
+  }
+
+  h1, h2 {
+    font-size: 1em;
+  }
+
+  .form-label {
+    font-size: 1em;
+  }
+
+  .cv-content {
+    overflow-x: scroll;
+  }
+
+  .projects {
+    height: 500px;
+    font-size: 1em;
+  }
+
+  .contact-form {
+    width: 250px;
+  }
+
+  .textarea {
+    height: 5px;
+    font-size: 1em;
+  }
+
+  .pageTitle{
+    display: none;
+  }
+
 }
 
 /*
