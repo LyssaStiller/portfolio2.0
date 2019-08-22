@@ -113,7 +113,7 @@
   height: 100%;
   flex-grow: 4;
   overflow-x: hidden;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   padding-right: -2%;
   border-radius: 2px;
 }
@@ -609,8 +609,8 @@ textarea:valid + .textarea-label .content-name
 button {
   font-size: 1.5em;
   position: absolute;
-  top: 550px;
-  left: 275px;
+  top: 570px;
+  left: 330px;
   padding: 1%;
   background-color: transparent;
   width: 150px;
@@ -632,7 +632,7 @@ button:hover {
   color: black;
   background-color: #edf2f3;
   top: 25px;
-  left: 275px;
+  left: 225px;
   border-radius: 2.5px;
 }
 
