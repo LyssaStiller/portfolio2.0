@@ -46,7 +46,6 @@ body {
 }
 
 .header {
-
   flex-direction: column;
   display: flex;
   margin: auto;
@@ -63,7 +62,6 @@ body {
   align-items: center;
   font-family: 'Raleway', sans-serif;
   letter-spacing: 0.1em;
-
  }
 
 .myname {
@@ -514,7 +512,6 @@ button:hover{
       margin-bottom: 0;
     }
 
-
     h1, h2 {
       font-size: 1em;
     }
@@ -525,8 +522,12 @@ button:hover{
       width: 100vw;
     }
 
+    .myname {
+      top: 5px;
+    }
+
     .seeMe {
-      max-height: 25%;
+      max-height: 40%;
       min-width: 100%;
       /* margin-left: 30px; */
       padding-bottom: 2%;
@@ -598,13 +599,13 @@ button:hover{
 
 
     .thumbnail{
-      max-width: 100%;
+      min-width: 100%;
     }
 
     .thumbnail img {
       object-fit: cover;
       margin-bottom: 4%;
-      width: 100%;
+      min-width: 100%;
       height: 125px;
       border-radius: 4px;
     }
@@ -619,8 +620,17 @@ button:hover{
       font-size: 1em;
     }
 
+    .cv-title {
+      display: inline-block;
+      font-size: 1.30em;
+    }
+
     .timeline {
       width: 360px;
+    }
+
+    .timeline .content h1 {
+      font-size: 1.5em;
     }
 
     .pageTitle {
@@ -673,94 +683,154 @@ button:hover{
    }
 
 }
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>MEDIA QUERIES ~ MEDIUM DEVICES (IPADS, TABLETS ETC.)<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+@media(min-width: 651px) and (max-width: 1024px){
+  .header {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 
-/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>MEDIA QUERIES ~ DESKTOP<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
-@media(min-width: 1300px) {
-   .main {
-      display: flex;
-      flex-direction: row-reverse;
-      height: 90vh;
-      width: 80vw;
-      margin: auto;
-      position: relative;
-      border-radius: 2px;
-   }
+  .myname {
+    font-size: 2em;
+    top: 50px;
+  }
 
-   .myname {
-      font-size: 2em;
-      top: 15px
-    }
+  .main {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+  }
 
-   .content {
-      overflow-y:auto;
-      padding-right: -2%;
-   }
+  .seeMe {
+    display: flex;
+    flex-direction: row;
+    max-height: 30vh;
+    width: 100%;
+    border: 5px black solid;
+  }
 
-   .seeMe {
-      min-width: 25%;
-      max-width: 25%;
-      margin-left: 30px;
-   }
+  .self-portrait {
+    flex-grow: 3;
+    min-width: 25%;
+  }
 
-   .self-portrait {
-      border: 3px solid black;
-   }
+  .self-portrait .shadow {
+    display: none;
+  }
 
-   .menu-child1 {
+  .self-portrait img {
+    /* border: 3px solid black; */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%; /* default value: image is centered*/
+    object-position: 0 0; /* positioned top left of the content box */
+    flex-grow: 1;
+
+ }
+
+ .menu {
+   display: flex;
+   flex-direction: column-reverse;
+ }
+
+  .menu-child1 {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    margin: 2%;
+    margin-top: 5%;
+    width: 100%;
+    padding-right: 5%;
+    padding-left: 5%;
+
+  }
+
+  .menu-child2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 4%;
+    padding-top: 4%;
+    align-items: center;
+    justify-content: space-between;
+
+  }
+
+  .option {
+    padding: 1px 5px;
+    margin-top: -2px;
+ }
+
+  .icons {
+    padding-top: 15px;
+  }
+
+  .icons img {
+    height: 45px;
+    width: 45px;
+    padding: 5px;
+  }
+
+  .content {
+    height: 90%;
+  }
+
+  .aboutme-content {
+    font-size: 1.10em;
+    line-height: 1.5em;
+    padding-left: 2%;
+    overflow-y: auto;
+    text-align: center;
+  }
+
+  .projects {
+    font-size: 1.10em;
+  }
+
+  @media screen and (orientation:portrait) {
+    .projects {
+      width: 80%;
+      height: 500px;
       display: flex;
       flex-direction: column;
-      align-items: stretch;
-      margin-right: 2%;
-      flex-grow: 1;
-   }
+      align-items: center;
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
 
-   .menu-child2 {
-      display: flex;
-      flex-direction: row;
-   }
 
-   .icons {
-      padding-bottom: 15px;
-   }
+    .thumbnail{
+      min-width: 100%;
+    }
 
-   .icons img {
-      height: 35px;
-      width: 35px;
-      padding: 5px;
-   }
+    .thumbnail img {
+      object-fit: cover;
+      margin-bottom: 4%;
+      min-width: 100%;
+      height: 200px;
+      border-radius: 4px;
+    }
 
-   .option {
-      padding-top: 1px;
-      padding-bottom: 1px;
-      padding-left: 5px;
-      padding-right: 5px;
-      margin-bottom: -2px;
-      margin-top: -2px;
-   }
+    .title {
+      text-align: center;
+    }
 
-   /*James Passos*/
+    .description {
+      margin: 2%;
+      padding: 5px 15px;
+      font-size: 1em;
+    }
+  }
 
-   .aboutme-content {
-      padding-left: 10%;
-      padding-top: 5%;
-      line-height: 1em;
-      font-size: 2em;
-   }
+  @media screen and (orientation:landscape){
 
-   .aboutme-content p {
-      font-size: 14pt;
-      max-width: 80%;
-      text-align: left;
-   }
-
-   img {
-      max-width: 100%;
-      margin-bottom: -2%;
-   }
-
-   .projects {
+    .seeMe {
+      height: 40vh;
+    }
+    .projects {
       width: 90%;
-      height: 300px;
+      height: 450px;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -789,61 +859,274 @@ button:hover{
       padding-right: 5px;
       padding-bottom: 5px;
    }
-/*
-   .footer {
-      background: #333333;
-      display: flex;
-      flex-direction: row;
-      width: 90vw;
-      height: 50px;
-      margin-top: 10px;
+
+   .contact-content {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+    width: 100%;
+  }
+
+  .pageTitle {
+    left: 50%;
+  }
+
+  .contact-form {
+     margin-top: 10px;
+     top: 50px;
+     left: 400px;
+     align-items: left;
+     /* padding: 2.5%; */
+  }
+
+    .form-label {
+      font-size: 1.25em;
+    }
+
+    input {
+      font-size: 1.25em;
+    }
+
+    textarea {
+      height: 150px;
+    }
+
+    button {
+      font-size: 1.4em;
       position: absolute;
-      bottom: 0;
-      margin-left: auto;
-      margin-right: auto;
-      left: 0;
-      right: 0;
-      z-index: 1;
-   } */
-
-   .pageTitle {
-     left: 30%;
-   }
-
-   .contact-form {
-      margin-top: 40px;
-      top: 50px;
-      left: 200px;
-      align-items: left;
-      /* padding: 2.5%; */
-   }
-
-   .form-label {
-      font-size: 1.5em;
-   }
-
-   input {
-      font-size: 1.5em;
-   }
-
-   textarea {
-      height: 200px;
-   }
-
-   button {
-      font-size: 1.5em;
-      position: absolute;
-      top: 450px;
-      left: 160px;
+      top: 400px;
+      left: 150px;
       padding: 1%;
       background-color: transparent;
       width: 150px;
       border: 2px solid white;
+    }
+
+    button:hover {
+    font-weight: 1.5em;
+    }
+  }
+
+  .cv-content {
+    font-size: 1.25em;
+  }
+
+  .contact-content {
+    margin: 0;
+    padding: 0;
+    overflow-y: scroll;
+  }
+
+  .pageTitle {
+    left: 25%;
+  }
+
+  .contact-form {
+     top: 50px;
+     left: 180px;
+     align-items: left;
+     /* padding: 2.5%; */
+  }
+
+  .form-label {
+     font-size: 1.25em;
+  }
+
+  input {
+     font-size: 1.25em;
+  }
+
+  textarea {
+     height: 150px;
+  }
+
+  button {
+     font-size: 1.4em;
+     position: absolute;
+     top: 400px;
+     left: 150px;
+     padding: 1%;
+     background-color: transparent;
+     width: 150px;
+     border: 2px solid white;
+  }
+
+  button:hover {
+   font-weight: 1.5em;
+  }
+
+}
+
+/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>MEDIA QUERIES ~ DESKTOP<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+@media(min-width: 1025px) {
+  .main {
+     display: flex;
+     flex-direction: row-reverse;
+     height: 90vh;
+     width: 80vw;
+     margin: auto;
+     position: relative;
+     border-radius: 2px;
+  }
+
+  .myname {
+     font-size: 2em;
+     top: 15px
    }
 
-   button:hover {
-    font-weight: 1.5em;
-   }
+  .content {
+     overflow-y:auto;
+     padding-right: -2%;
+  }
+
+  .seeMe {
+     min-width: 25%;
+     max-width: 25%;
+     margin-left: 30px;
+  }
+
+  .self-portrait {
+     border: 3px solid black;
+  }
+
+  .menu-child1 {
+     display: flex;
+     flex-direction: column;
+     align-items: stretch;
+     margin-right: 2%;
+     flex-grow: 1;
+  }
+
+  .menu-child2 {
+     display: flex;
+     flex-direction: row;
+  }
+
+  .icons {
+     padding-bottom: 15px;
+  }
+
+  .icons img {
+     height: 35px;
+     width: 35px;
+     padding: 5px;
+  }
+
+  .option {
+     padding-top: 1px;
+     padding-bottom: 1px;
+     padding-left: 5px;
+     padding-right: 5px;
+     margin-bottom: -2px;
+     margin-top: -2px;
+  }
+
+  /*James Passos*/
+
+  .aboutme-content {
+     padding-left: 10%;
+     padding-top: 5%;
+     line-height: 1em;
+     font-size: 2em;
+  }
+
+  .aboutme-content p {
+     font-size: 14pt;
+     max-width: 80%;
+     text-align: left;
+  }
+
+  img {
+     max-width: 100%;
+     margin-bottom: -2%;
+  }
+
+  .projects {
+     width: 90%;
+     height: 300px;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+  }
+
+  .thumbnail{
+     max-height: 100%;
+     margin: 10px;
+  }
+
+  .thumbnail img {
+     object-fit: contain;
+     width: 200px;
+     height: 200px;
+     border-radius: 4px;
+     padding: 10px;
+  }
+
+  .title {
+     margin-top: -10px;
+  }
+
+  .description {
+     /* border: 1px solid blue; */
+     margin: 1%;
+     padding-right: 5px;
+     padding-bottom: 5px;
+  }
+/*
+  .footer {
+     background: #333333;
+     display: flex;
+     flex-direction: row;
+     width: 90vw;
+     height: 50px;
+     margin-top: 10px;
+     position: absolute;
+     bottom: 0;
+     margin-left: auto;
+     margin-right: auto;
+     left: 0;
+     right: 0;
+     z-index: 1;
+  } */
+
+  .pageTitle {
+    left: 30%;
+  }
+
+  .contact-form {
+     margin-top: 40px;
+     top: 50px;
+     left: 200px;
+     align-items: left;
+     /* padding: 2.5%; */
+  }
+
+  .form-label {
+     font-size: 1.5em;
+  }
+
+  input {
+     font-size: 1.5em;
+  }
+
+  textarea {
+     height: 200px;
+  }
+
+  button {
+     font-size: 1.5em;
+     position: absolute;
+     top: 450px;
+     left: 160px;
+     padding: 1%;
+     background-color: transparent;
+     width: 150px;
+     border: 2px solid white;
+  }
+
+  button:hover {
+   font-weight: 1.5em;
+  }
 
 }
 
