@@ -48,3 +48,28 @@ function makeVisible(divToShow){
 }
 
 
+//DYNAMICALLY ALTER CSS
+//TRACK WINDOW RESIZING
+
+let heightOutput;
+let widthOutput;
+const contentDiv = document.querySelector('.content');
+const contentDivRect = contentDiv.getBoundingClientRect();
+let contentDivHt
+let contentDivWth
+
+
+window.addEventListener('resize', reportWindowSize);
+
+function reportWindowSize() {
+  heightOutput  = window.innerHeight;
+  widthOutput = window.innerWidth;
+
+  console.log(heightOutput, widthOutput)
+}
+
+// function adjustAbsElements (){
+//   if(heighOutput <= 700){
+
+//   }
+// }

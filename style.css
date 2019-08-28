@@ -20,6 +20,14 @@ body {
 
 }
 
+#height {
+  display: none;
+}
+
+#width {
+  display: none;
+}
+
 #particles-js {
  /* background: linear-gradient(#808080, #525252, #3B3B3B); */
  position: absolute;
@@ -150,7 +158,7 @@ body {
 
 .projects-content {
   display: none;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   padding-left: 5%;
 }
 
@@ -164,7 +172,7 @@ body {
   display: none;
   position: relative;
   height: 100%;
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 
 .show {
@@ -593,7 +601,7 @@ button:hover{
       display: flex;
       flex-direction: column;
       align-items: center;
-      overflow-y: scroll;
+      /* overflow-y: scroll; */
       overflow-x: hidden;
     }
 
@@ -629,7 +637,7 @@ button:hover{
       width: 360px;
     }
 
-    .timeline .content h1 {
+    .timeline .lifeEvent h1 {
       font-size: 1.5em;
     }
 
@@ -723,8 +731,8 @@ button:hover{
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: 50% 50%; /* default value: image is centered*/
-    object-position: 0 0; /* positioned top left of the content box */
+    object-position: 50% 28%; /* default value: image is centered*/
+    /* object-position: 0 0; positioned top left of the content box */
     flex-grow: 1;
 
  }
@@ -732,12 +740,15 @@ button:hover{
  .menu {
    display: flex;
    flex-direction: column-reverse;
+   position: relative;
  }
 
   .menu-child1 {
     display: flex;
     flex-direction: row;
     align-items: stretch;
+    position: absolute;
+    top: 200px;
     margin: 2%;
     margin-top: 5%;
     width: 100%;
@@ -749,6 +760,8 @@ button:hover{
   .menu-child2 {
     display: flex;
     flex-direction: row;
+    position: absolute;
+    top: 30px;
     width: 100%;
     margin-bottom: 4%;
     padding-top: 4%;
@@ -914,7 +927,7 @@ button:hover{
   .contact-content {
     margin: 0;
     padding: 0;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
   }
 
   .pageTitle {
