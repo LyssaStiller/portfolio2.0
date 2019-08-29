@@ -650,6 +650,9 @@ button:hover{
       overflow-x: hidden;
     }
 
+    .contact-content {
+      overflow-y: scroll;
+    }
 
     .contact-form {
       width: 100%;
