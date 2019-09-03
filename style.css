@@ -1105,13 +1105,13 @@ button:hover{
   } */
 
   .pageTitle {
-    left: 30%;
+    left: 25%;
   }
 
   .contact-form {
      margin-top: 40px;
      top: 50px;
-     left: 200px;
+     left: 100px;
      align-items: left;
      /* padding: 2.5%; */
   }
