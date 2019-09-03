@@ -158,7 +158,7 @@ body {
 .projects-content {
   display: none;
   /* overflow-y: auto; */
-  padding-left: 5%;
+  /* padding-left: 5%; */
 }
 
 .cv-content {
@@ -214,6 +214,7 @@ body {
   flex-direction: row;
   justify-content: space-around;
   justify-items: flex-start;
+  font-size: 1.25em;
 }
 
 .leaveSite a {
@@ -1058,7 +1059,7 @@ button:hover{
 
   .projects {
      width: 90%;
-     height: 300px;
+     height: 350px;
      display: flex;
      flex-direction: row;
      align-items: center;
@@ -1066,7 +1067,8 @@ button:hover{
 
   .thumbnail{
      max-height: 100%;
-     margin: 10px;
+     margin: 15px;
+     margin-right: 20px;
   }
 
   .thumbnail img {
@@ -1074,7 +1076,7 @@ button:hover{
      width: 200px;
      height: 200px;
      border-radius: 4px;
-     padding: 10px;
+     /* padding: 10px; */
   }
 
   .title {
